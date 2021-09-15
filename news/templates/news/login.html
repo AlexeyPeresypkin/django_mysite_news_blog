@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Login :: {{ block.super }}
+    Авторизация :: {{ block.super }}
 {% endblock %}
 
 {% block sidebar %}
@@ -10,4 +10,9 @@
 
 {% block content %}
     <h1>Авторицазия</h1>
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Авторизация</button>
+    </form>
 {% endblock %}
