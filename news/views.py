@@ -46,7 +46,7 @@ def user_logout(request):
     return redirect('news:login')
 
 
-def test(request):
+def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -58,7 +58,7 @@ def test(request):
                 messages.success(request, 'Письмо отправлено')
                 return redirect('news:test')
             else:
-                messages.error('Ошибка отправки')
+                messages.error(request, 'Ошибка отправки')
         else:
             messages.error(request, 'Не заполнены поля')
     else:
