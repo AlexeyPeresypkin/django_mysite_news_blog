@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'news',
+    'testapp',
     'ckeditor',
     'ckeditor_uploader',
     'captcha',
+    'mptt',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +143,5 @@ CACHES = {
         'LOCATION': BASE_DIR / 'django_cache',
     }
 }
+
+MPTT_ADMIN_LEVEL_INDENT = 20
